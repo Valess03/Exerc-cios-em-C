@@ -1,0 +1,51 @@
+
+// Online C++ Compiler - Build, Compile and Run your C++ programs online in your favorite browser
+
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    char operacao ;
+    double numero1, numero2 , resultado;
+    
+    printf("Bem vindo (a) a calculadora!\n");
+    printf("Digite a operação que deseja fazer ( +, - , * , /");
+    scanf("%c", &operacao);
+    
+     // numero1
+     printf(" Digite o primeiro número:");
+     scanf("%lf", &numero1);
+     
+     // numero2
+     printf(" Digite o segundo número:");
+     scanf("%lf", &numero2);
+     
+     //estrutura condicional
+     switch(operacao) {
+         case '+':
+         resultado = numero1 + numero2;
+         break;
+         case '-':
+         resultado = numero1 - numero2;
+         break;
+         case '/':
+         if(numero2 == 0);
+         printf ("Divisão por 0 não é permitido");
+         return 1;
+         
+         resultado = numero1 / numero2;
+         break;
+         case '*':
+         resultado = numero1 * numero2;
+         break;
+         default:
+         printf(" Erro: Voce escreveu uma operação invalida ");
+         return 1;
+     }
+     
+    printf("%c, %lf, %lf, %lf" , operacao, numero1, numero2, resultado);
+    
+    return 0;
+}
